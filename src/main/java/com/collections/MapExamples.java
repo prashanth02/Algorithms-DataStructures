@@ -33,6 +33,9 @@ public class MapExamples {
     ConcurrentHashMap uses a database shards logic (Segment<K, V>[] segments) is known as Concurrency-Level, i.e. divides the data into shards(segments) than puts locks on each shard (segment) instead of putting a single lock for whole data (Map). The default value is 16.
     */
 
+    /*
+    ConcurrentHashMap is used to store DBConnections in ERS
+     */
     public static void main(String args[]) {
         Map map = concurrentHashMapTest();
         hashMapIterationsTest(map);
