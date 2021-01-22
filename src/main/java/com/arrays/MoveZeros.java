@@ -28,24 +28,24 @@ public class MoveZeros {
 
         System.out.println("After Moving Zeroes to Left: " + Arrays.toString(v));
     }
-    static void moveZerosToLeft(int[] A) {
-        if (A.length < 1) {
+    static void moveZerosToLeft(int[] intArray) {
+        if (intArray.length < 1) {
             return;
         }
 
-        int writeIndex = A.length - 1;
-        int readIndex = A.length - 1;
+        int writeIndex = intArray.length - 1;
+        int readIndex = intArray.length - 1;
 
         while(readIndex >= 0) {
-            if(A[readIndex] != 0) {
-                A[writeIndex] = A[readIndex];
+            if(intArray[readIndex] != 0) {
+                intArray[writeIndex] = intArray[readIndex];
                 writeIndex--;
             }
             readIndex--;
         }
 
         while(writeIndex >= 0) {
-            A[writeIndex] = 0;
+            intArray[writeIndex] = 0;
             writeIndex--;
         }
     }
