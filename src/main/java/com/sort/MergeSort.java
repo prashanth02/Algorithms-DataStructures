@@ -4,22 +4,22 @@ package com.sort;
 // https://www.geeksforgeeks.org/merge-sort/?ref=lbp
 class MergeSort {
     // Merges two subarrays of arr[].
-    // First subarray is arr[begin..pivot]
-    // Second subarray is arr[pivot+1..end]
-    void merge(int arr[], int begin, int pivot, int end) {
+    // First subarray is arr[begin..mid]
+    // Second subarray is arr[mid+1..end]
+    void merge(int arr[], int begin, int mid, int end) {
         // Find sizes of two subarrays to be merged
-        int sizeTillPivot = pivot - begin + 1;
-        int sizePivotTillEnd = end - pivot;
+        int sizeTillMid = mid - begin + 1;
+        int sizeMidTillEnd = end - mid;
 
         /* Create temp arrays */
-        int leftArr[] = new int[sizeTillPivot];
-        int rightArr[] = new int[sizePivotTillEnd];
+        int leftArr[] = new int[sizeTillMid];
+        int rightArr[] = new int[sizeMidTillEnd];
 
         /*Copy data to temp arrays*/
-        for (int i = 0; i < sizeTillPivot; ++i)
+        for (int i = 0; i < sizeTillMid; ++i)
             leftArr[i] = arr[begin + i];
-        for (int j = 0; j < sizePivotTillEnd; ++j)
-            rightArr[j] = arr[pivot + 1 + j];
+        for (int j = 0; j < sizeMidTillEnd; ++j)
+            rightArr[j] = arr[mid + 1 + j];
 
         /* Merge the temp arrays */
 
@@ -28,29 +28,22 @@ class MergeSort {
 
         // Initial index of merged subarry array
         int k = begin;
-        while (i < sizeTillPivot && j < sizePivotTillEnd) {
+        while (i < sizeTillMid && j < sizeMidTillEnd) {
             if (leftArr[i] <= rightArr[j]) {
-                arr[k] = leftArr[i];
-                i++;
+                arr[k++] = leftArr[i++];
             } else {
-                arr[k] = rightArr[j];
-                j++;
+                arr[k++] = rightArr[j++];
             }
-            k++;
         }
 
         /* Copy remaining elements of leftArr[] if any */
-        while (i < sizeTillPivot) {
-            arr[k] = leftArr[i];
-            i++;
-            k++;
+        while (i < sizeTillMid) {
+            arr[k++] = leftArr[i++];
         }
 
         /* Copy remaining elements of rightArr[] if any */
-        while (j < sizePivotTillEnd) {
-            arr[k] = rightArr[j];
-            j++;
-            k++;
+        while (j < sizeMidTillEnd) {
+            arr[k++] = rightArr[j++];
         }
     }
 
