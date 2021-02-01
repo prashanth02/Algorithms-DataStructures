@@ -37,7 +37,7 @@ public class QuadTree {
 
     QuadTree(int level, Boundry boundry) {
         this.level = level;
-        nodes = new ArrayList<Node>();
+        nodes = new ArrayList<>();
         this.boundry = boundry;
     }
 

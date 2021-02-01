@@ -95,10 +95,8 @@ class QuickSort {
         for (int j = low; j < high; j++) {
             // If current element is smaller than the pivot
             if (arr[j] < pivot) {
-                i++;
-
                 // swap arr[i] and arr[j]
-                int temp = arr[i];
+                int temp = arr[i++];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }

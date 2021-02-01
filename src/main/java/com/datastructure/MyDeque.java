@@ -5,6 +5,8 @@ import java.util.NoSuchElementException;
 
 public class MyDeque {
 
+    //enqueue() means to  an item at the back of the queue.
+    //dequeue() means to remove an item from the front of the queue.
     /**
      * Constructs an empty array deque with an initial capacity
      * sufficient to hold 16 elements.
