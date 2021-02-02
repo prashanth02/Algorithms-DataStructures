@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 /**
  * <p>Thread-safe Singleton class. The instance is lazily initialized and thus needs synchronization

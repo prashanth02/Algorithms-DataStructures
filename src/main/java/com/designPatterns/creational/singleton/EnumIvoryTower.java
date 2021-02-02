@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 /**
  * <p>Enum based singleton implementation. Effective Java 2nd Edition (Joshua Bloch) p. 18</p>

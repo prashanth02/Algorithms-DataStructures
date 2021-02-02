@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 /**
  * <p>Singleton pattern ensures that the class can have only one existing instance per Java

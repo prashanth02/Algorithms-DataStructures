@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 /**
  * Singleton class. Eagerly initialized static instance guarantees thread safety.

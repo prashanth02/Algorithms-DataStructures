@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 /**
  * <p>The Initialize-on-demand-holder idiom is a secure way of creating a lazy initialized singleton

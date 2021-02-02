@@ -1,4 +1,4 @@
-package com.designPatterns.singleton;
+package com.designPatterns.creational.singleton;
 
 public final class ThreadSafeDoubleCheckLocking {
 
